@@ -3,8 +3,24 @@ body {
   background-color: #f5f7fa;
 }
 
+/* ul li {
+  list-style: none;
+} */
+a {
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+}
+.main-section {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 1200px;
+  margin: 40px auto;
+  box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.1);
+}
+
 .main-content-section {
-  margin: 70px 80px;
+  margin: 60px 80px;
 }
 
 .main-content-title {
@@ -16,24 +32,14 @@ body {
   margin-bottom: 10px;
 }
 
-.main-section {
-  display: flex;
-  flex-direction: row-reverse;
-  width: 1200px;
-  margin: 40px auto;
-  box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.1);
-}
-
 .about-me {
   font-style: normal;
 }
 .about-me__title {
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 17px;
   margin-bottom: 20px;
-  font-size: 14px;
-  font-weight: 700;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 17px;
 }
 .about-me__text {
   color: #595959;
@@ -42,7 +48,6 @@ body {
   font-size: 14px;
   line-height: 24px;
   margin-bottom: 40px;
-  width: 400px;
 }
 
 .my-name {
@@ -51,8 +56,9 @@ body {
   font-size: 45px;
   line-height: 55px;
   margin-bottom: 25px;
+  margin-top: 0;
 }
-.Project-secion {
+.project-secion {
   margin-bottom: 50px;
 }
 .projects-list {
@@ -67,6 +73,14 @@ body {
   line-height: 24px;
   color: black;
 }
+.my-project-item a {
+  color: #595959;
+}
+
+.my-project-item a:hover {
+  color: #fb6d3a;
+}
+
 .my-project-text {
   font-style: normal;
   font-weight: normal;
@@ -80,7 +94,6 @@ body {
   font-weight: normal;
   font-size: 14px;
   line-height: 24px;
-  color: #595959;
 }
 .my-project-bracket {
   font-style: normal;
@@ -89,38 +102,44 @@ body {
   line-height: 24px;
   color: black;
 }
-.work-espirion-company {
+.work-experience-company {
   color: #fb6d3a;
 }
-.work-espirion-position {
+.work-experience-position {
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
   line-height: 20px;
   margin-bottom: 10px;
 }
-.work-espirion-period {
+.work-experience-period {
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
   line-height: 15px;
   color: #a8a8a8;
 }
-.work-espirion-devider {
+.work-experience-devider {
   color: black;
 }
-.work-espirion-duties {
+.work-experience-duties {
   padding-left: 15px;
 }
-.work-espirion-duty {
+.work-experience-duty {
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 24px;
 }
-.my-education-title {
-  font-style: normal;
+
+.my-education__name {
   font-weight: bold;
+}
+.my-education-title {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-style: normal;
+  font-weight: normal;
   font-size: 14px;
   line-height: 17px;
 }
@@ -135,27 +154,25 @@ li {
 
 .sitebar-section {
   background-color: #86c6ca;
-  width: 370px;
+  min-width: 370px;
   padding: 30px 0;
 }
 
+.image-container {
+  display: block;
+  margin: 0 auto;
+  width: 300px;
+}
 .contact,
 .tech-skils,
 .soft-skils,
 .language-skils {
   margin: 50px 0 0 40px;
 }
-.contact__tel,
-.contact__email,
-.contact__telegram {
-  margin-right: 5px;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 24px;
-  color: rgb(243, 225, 225);
-}
-.contact__link {
+
+.contact__link,
+.contact__adress {
+  text-decoration: none;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -177,15 +194,22 @@ li {
   margin-bottom: 10px;
 }
 
+.contact-list,
 .tech-skils__list,
 .soft-skils__list,
 .language-skils__list {
   padding-left: 17px;
 }
+
+.contact-list,
+.language-skils__list {
+  list-style: none;
+}
+
 .tech-skils__item,
 .soft-skils__item,
 .language-skils__item {
-  color: #fb6d3a;
+  color: #343e4d;
 }
 .tech-skils__text,
 .soft-skils__text,
@@ -194,9 +218,5 @@ li {
   font-weight: normal;
   font-size: 15px;
   line-height: 24px;
-  color: rgb(243, 225, 225);
-}
-
-.language-skils__item {
-  text-decoration: none;
+  color: #343e4d;
 }
