@@ -3,11 +3,7 @@ body {
   background-color: #f5f7fa;
 }
 
-/* ul li {
-  list-style: none;
-} */
 a {
-  text-decoration: none;
   outline: none;
   cursor: pointer;
 }
@@ -95,13 +91,10 @@ a {
   font-size: 14px;
   line-height: 24px;
 }
-.my-project-bracket {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 24px;
-  color: black;
+.my-project-description {
+  margin: 10px 0;
 }
+
 .work-experience-company {
   color: #fb6d3a;
 }
@@ -172,7 +165,6 @@ li {
 
 .contact__link,
 .contact__adress {
-  text-decoration: none;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -201,8 +193,7 @@ li {
   padding-left: 17px;
 }
 
-.contact-list,
-.language-skils__list {
+.contact-list {
   list-style: none;
 }
 
