@@ -1,5 +1,5 @@
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   background-color: #f5f7fa;
 }
 
@@ -33,7 +33,7 @@ ol {
 
 .about-me {
   font-style: normal;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 .about-me__title {
   margin-bottom: 20px;
@@ -58,10 +58,11 @@ ol {
   margin-top: 0;
 }
 .project-secion {
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 .projects-list {
   padding-left: 17px;
+
   color: black;
 }
 
