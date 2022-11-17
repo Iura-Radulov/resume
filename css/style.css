@@ -95,6 +95,9 @@ ol {
   font-size: 14px;
   line-height: 24px;
 }
+.my-project-link:hover {
+  color: #fb6d3a;
+}
 .my-project-description {
   margin: 8px 0;
 }
