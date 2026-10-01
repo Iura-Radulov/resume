@@ -12,11 +12,186 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
+  
+<style>
+      /* ---- print / PDF layout: A4, teal band as page left margin ---- */
+      @media print {
+        @page {
+          size: A4 portrait;
+          margin: 0 0 0 60mm;
+        }
+        body {
+          background: #ffffff;
+          margin: 0;
+        }
+        .print-band {
+          position: fixed;
+          top: 0;
+          left: -60mm;
+          width: 60mm;
+          height: 297mm;
+          background: #86c6ca;
+          z-index: -1;
+        }
+        .main-section {
+          display: block;
+          width: auto;
+          margin: 0;
+          box-shadow: none;
+        }
+        .main-content-section {
+          margin: 0;
+          padding: 6mm 6mm 5mm 6mm;
+        }
+        .sitebar-section {
+          position: absolute;
+          top: 0;
+          left: -60mm;
+          width: 60mm;
+          min-width: 0;
+          padding: 6mm 0;
+          background: transparent;
+        }
+        .image-container {
+          width: 44mm;
+        }
+        .image-container img {
+          width: 44mm !important;
+          height: auto;
+        }
+        .contact, .tech-skils, .soft-skils, .language-skils {
+          margin: 4mm 0 0 6mm;
+        }
+        .contact__title, .tech-skils__title, .soft-skils__title, .language-skils__title {
+          font-size: 16px;
+          line-height: 20px;
+          margin-bottom: 6px;
+        }
+        .tech-skils__text, .soft-skils__text, .language-skils__text,
+        .contact__link, .contact__adress {
+          font-size: 11.5px;
+          line-height: 16px;
+        }
+        .my-name { font-size: 29px; line-height: 32px; margin-bottom: 6px; }
+        .about-me__title { font-size: 14px; line-height: 18px; margin-bottom: 10px; }
+        .main-content-title { font-size: 17px; line-height: 21px; margin-bottom: 6px; }
+        .about-me__text, li { font-size: 12px; line-height: 16px; }
+        .my-project-item, .my-project-text, .my-project-link, .my-project-description { font-size: 12px; line-height: 16px; }
+        .work-experience-position { font-size: 13.5px; line-height: 17px; margin-bottom: 5px; }
+        .work-experience-period { font-size: 10.5px; line-height: 13px; }
+        .work-experience-duty { font-size: 12px; line-height: 16px; }
+        .projects-list { padding-left: 14px; margin: 0 0 6px 0; }
+        .work-experience-duties { padding-left: 14px; margin: 3px 0 6px 0; }
+        .my-project-description { margin: 3px 0; }
+        a { text-decoration: none; }
+      }
+    </style>
   </head>
 
   <body>
+    <div class="print-band" aria-hidden="true"></div>
     <!--main section-->
     <div class="main-section">
+      <aside class="sitebar-section">
+        <div class="image-container">
+          <img src="img/my-photo.jpg" alt="My foto" width="300" />
+        </div>
+
+        <!--Contact section-->
+        <div class="contact">
+          <h3 class="contact__title">Contacts</h3>
+          <ul class="contact-list">
+            <li>
+              <a class="contact__link" href="tel:+373****7934" target="_blank">+373 602 679 34</a>
+            </li>
+            <li>
+              <a class="contact__link" href="mailto:iura.radulov@gmail.com" target="_blank"
+                >iura.radulov@gmail.com</a
+              >
+            </li>
+            <li>
+              <a class="contact__link" href="https://github.com/Iura-Radulov" target="_blank"
+                >GitHub</a
+              >
+            </li>
+            <li>
+              <a class="contact__link" href="https://linkedin.com/in/iuri-radulov" target="_blank"
+                >LinkedIn</a
+              >
+            </li>
+            <li>
+              <a class="contact__link" href="https://t.me/Iuri_Radu" target="_blank">Telegram</a>
+            </li>
+            <li>
+              <a class="contact__link" href="https://iura-radulov.github.io/portfolio/" target="_blank"
+                >Portfolio</a
+              >
+            </li>
+            <li class="contact__adress">Chisinau, Moldova (open to relocation to the EU)</li>
+          </ul>
+        </div>
+        <!--Tech skils section-->
+        <div class="tech-skils">
+          <h3 class="tech-skils__title">Tech Skills</h3>
+          <ul class="tech-skils__list">
+            <li class="tech-skils__item"><span class="tech-skils__text">PHP, Laravel, Filament</span></li>
+            <li class="tech-skils__item">
+              <span class="tech-skils__text">JavaScript, TypeScript, React, Next.js</span>
+            </li>
+            <li class="tech-skils__item"><span class="tech-skils__text">Vue.js, Nuxt, React Native</span></li>
+            <li class="tech-skils__item"><span class="tech-skils__text">Node.js, Python (FastAPI)</span></li>
+            <li class="tech-skils__item">
+              <span class="tech-skils__text">PostgreSQL, MySQL, SQLite, Prisma</span>
+            </li>
+            <li class="tech-skils__item"><span class="tech-skils__text">Redis, MongoDB</span></li>
+            <li class="tech-skils__item"><span class="tech-skils__text">REST API, webhooks, payments</span></li>
+            <li class="tech-skils__item">
+              <span class="tech-skils__text">Stripe, Cardstream, MAIB</span>
+            </li>
+            <li class="tech-skils__item"><span class="tech-skils__text">Docker, CI/CD, Git, GitHub</span></li>
+            <li class="tech-skils__item">
+              <span class="tech-skils__text">AI-assisted development: Cursor, Claude Code, Codex</span>
+            </li>
+            <li class="tech-skils__item"><span class="tech-skils__text">HTML, CSS, SCSS, Tailwind</span></li>
+            <li class="tech-skils__item"><span class="tech-skils__text">WordPress</span></li>
+          </ul>
+        </div>
+        <!--Soft skils section-->
+        <div class="soft-skils">
+          <h3 class="soft-skils__title">Soft Skills</h3>
+          <ul class="soft-skils__list">
+            <li class="soft-skils__item">
+              <span class="soft-skils__text">Ownership and reliability</span>
+            </li>
+            <li class="soft-skils__item">
+              <span class="soft-skils__text">Clear communication of trade-offs</span>
+            </li>
+            <li class="soft-skils__item"><span class="soft-skils__text">Code review and mentoring</span></li>
+            <li class="soft-skils__item">
+              <span class="soft-skils__text">Critical thinking, problem solving</span>
+            </li>
+            <li class="soft-skils__item"><span class="soft-skils__text">Continuous learning</span></li>
+          </ul>
+        </div>
+        <!--Language skils section-->
+        <div class="language-skils">
+          <h3 class="language-skils__title">Language Skills</h3>
+          <ul class="language-skils__list">
+            <li class="language-skils__item">
+              <span class="language-skils__text">Russian - native</span>
+            </li>
+            <li class="language-skils__item">
+              <span class="language-skils__text">English - B2 (Upper-Intermediate)</span>
+            </li>
+            <li class="language-skils__item">
+              <span class="language-skils__text">Romanian - upper-intermediate</span>
+            </li>
+            <li class="language-skils__item">
+              <span class="language-skils__text">Turkish - intermediate</span>
+            </li>
+          </ul>
+        </div>
+      </aside>
       <div class="main-content-section">
         <!--main content section-->
         <!--about me section-->
@@ -292,106 +467,7 @@
         </div>
       </div>
       <!--Sitebar section-->
-      <aside class="sitebar-section">
-        <div class="image-container">
-          <img src="img/my-photo.jpg" alt="My foto" width="300" />
-        </div>
-
-        <!--Contact section-->
-        <div class="contact">
-          <h3 class="contact__title">Contacts</h3>
-          <ul class="contact-list">
-            <li>
-              <a class="contact__link" href="tel:+37360267934" target="_blank">+373 602 679 34</a>
-            </li>
-            <li>
-              <a class="contact__link" href="mailto:iura.radulov@gmail.com" target="_blank"
-                >iura.radulov@gmail.com</a
-              >
-            </li>
-            <li>
-              <a class="contact__link" href="https://github.com/Iura-Radulov" target="_blank"
-                >GitHub</a
-              >
-            </li>
-            <li>
-              <a class="contact__link" href="https://linkedin.com/in/iuri-radulov" target="_blank"
-                >LinkedIn</a
-              >
-            </li>
-            <li>
-              <a class="contact__link" href="https://t.me/Iuri_Radu" target="_blank">Telegram</a>
-            </li>
-            <li>
-              <a class="contact__link" href="https://iura-radulov.github.io/portfolio/" target="_blank"
-                >Portfolio</a
-              >
-            </li>
-            <li class="contact__adress">Chisinau, Moldova (open to relocation to the EU)</li>
-          </ul>
-        </div>
-        <!--Tech skils section-->
-        <div class="tech-skils">
-          <h3 class="tech-skils__title">Tech Skills</h3>
-          <ul class="tech-skils__list">
-            <li class="tech-skils__item"><span class="tech-skils__text">PHP, Laravel, Filament</span></li>
-            <li class="tech-skils__item">
-              <span class="tech-skils__text">JavaScript, TypeScript, React, Next.js</span>
-            </li>
-            <li class="tech-skils__item"><span class="tech-skils__text">Vue.js, Nuxt, React Native</span></li>
-            <li class="tech-skils__item"><span class="tech-skils__text">Node.js, Python (FastAPI)</span></li>
-            <li class="tech-skils__item">
-              <span class="tech-skils__text">PostgreSQL, MySQL, SQLite, Prisma</span>
-            </li>
-            <li class="tech-skils__item"><span class="tech-skils__text">Redis, MongoDB</span></li>
-            <li class="tech-skils__item"><span class="tech-skils__text">REST API, webhooks, payments</span></li>
-            <li class="tech-skils__item">
-              <span class="tech-skils__text">Stripe, Cardstream, MAIB</span>
-            </li>
-            <li class="tech-skils__item"><span class="tech-skils__text">Docker, CI/CD, Git, GitHub</span></li>
-            <li class="tech-skils__item">
-              <span class="tech-skils__text">AI-assisted development: Cursor, Claude Code, Codex</span>
-            </li>
-            <li class="tech-skils__item"><span class="tech-skils__text">HTML, CSS, SCSS, Tailwind</span></li>
-            <li class="tech-skils__item"><span class="tech-skils__text">WordPress</span></li>
-          </ul>
-        </div>
-        <!--Soft skils section-->
-        <div class="soft-skils">
-          <h3 class="soft-skils__title">Soft Skills</h3>
-          <ul class="soft-skils__list">
-            <li class="soft-skils__item">
-              <span class="soft-skils__text">Ownership and reliability</span>
-            </li>
-            <li class="soft-skils__item">
-              <span class="soft-skils__text">Clear communication of trade-offs</span>
-            </li>
-            <li class="soft-skils__item"><span class="soft-skils__text">Code review and mentoring</span></li>
-            <li class="soft-skils__item">
-              <span class="soft-skils__text">Critical thinking, problem solving</span>
-            </li>
-            <li class="soft-skils__item"><span class="soft-skils__text">Continuous learning</span></li>
-          </ul>
-        </div>
-        <!--Language skils section-->
-        <div class="language-skils">
-          <h3 class="language-skils__title">Language Skills</h3>
-          <ul class="language-skils__list">
-            <li class="language-skils__item">
-              <span class="language-skils__text">Russian - native</span>
-            </li>
-            <li class="language-skils__item">
-              <span class="language-skils__text">English - B2 (Upper-Intermediate)</span>
-            </li>
-            <li class="language-skils__item">
-              <span class="language-skils__text">Romanian - upper-intermediate</span>
-            </li>
-            <li class="language-skils__item">
-              <span class="language-skils__text">Turkish - intermediate</span>
-            </li>
-          </ul>
-        </div>
-      </aside>
+      
     </div>
   </body>
 </html>
